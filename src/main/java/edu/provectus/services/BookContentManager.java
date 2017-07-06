@@ -10,6 +10,8 @@ public interface BookContentManager {
 
     public void addNewBookGenre(String genreName);
 
+    public void addNewBookAuthor(String authorName);
+
     public void editBookTitle(int bookId, String newBookTitle);
 
     public void editBookDescription(int bookId, String newBookDescription);

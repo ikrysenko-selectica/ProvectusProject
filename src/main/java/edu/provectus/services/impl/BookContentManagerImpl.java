@@ -33,6 +33,7 @@ public class BookContentManagerImpl implements BookContentManager {
         this.authorRepository = authorRepository;
     }
 
+
     @Override
     @Transactional
     public void addNewBook(FullBookInfoDTO fullBookInfoDTO) {
@@ -55,6 +56,14 @@ public class BookContentManagerImpl implements BookContentManager {
         genre.setName(genreName);
 
         genreRepository.add(genre);
+    }
+
+    @Override
+    public void addNewBookAuthor(String authorName) {
+        Author author = new Author();
+        author.setName(authorName);
+
+        authorRepository.add(author);
     }
 
     @Override
