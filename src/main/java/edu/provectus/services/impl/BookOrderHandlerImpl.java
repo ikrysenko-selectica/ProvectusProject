@@ -98,9 +98,10 @@ public class BookOrderHandlerImpl implements BookOrderHandler {
         orderRepository.update(order);
     }
 
+
     @Override
     @Transactional
-    public void editUserSecondname(int orderId, String lastname) {
+    public void editUserLastname(int orderId, String lastname) {
         Order order = orderRepository.getById(orderId);
         order.setLastName(lastname);
         orderRepository.update(order);
